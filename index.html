@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Combined Web Projects</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#todo">To-Do List</a></li>
+        <li><a href="#products">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <h1>Portfolio</h1>
+      <h2>About Me</h2>
+      <p>This is a brief introduction about me.</p>
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Sample Project</h3>
+        <p>Project description here.</p>
+      </div>
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Name" required/>
+        <input type="email" placeholder="Email" required/>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- To-Do List Section -->
+    <section id="todo">
+      <h1>To-Do List</h1>
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Enter a task" required />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section id="products">
+      <h1>Product Listing</h1>
+      <div class="controls">
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+        </select>
+        <select id="sort-options">
+          <option value="default">Sort By</option>
+          <option value="price-low-high">Price: Low to High</option>
+          <option value="price-high-low">Price: High to Low</option>
+          <option value="rating">Rating</option>
+        </select>
+      </div>
+      <div id="product-list" class="product-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
